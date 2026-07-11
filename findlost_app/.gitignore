@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Django
+db.sqlite3
+db.sqlite3-journal
+*.log
+staticfiles/
+
+# Uploaded media (keep the folder structure, ignore the contents)
+media/missing_photos/*
+media/reports/*
+!media/missing_photos/.gitkeep
+!media/reports/.gitkeep
+
+# Test fixtures the user must supply locally (not part of the repo)
+tests/fixtures/*
+!tests/fixtures/.gitkeep
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+
+# Environment variables
+.env

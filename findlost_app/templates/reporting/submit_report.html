@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}Report a Sighting{% endblock %}
+{% block content %}
+<h3 class="mb-3">Report a Sighting</h3>
+<p class="text-muted">Your report will be matched automatically against registered missing-person records.</p>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Submit Sighting</button>
+</form>
+{% endblock %}

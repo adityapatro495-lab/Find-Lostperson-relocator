@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="alert alert-success">
+    <h4>Sighting Report Submitted</h4>
+    <p>Thank you — report #{{ report_id }} has been queued for automatic matching.
+    You will not be contacted directly; a registered family will be notified only if
+    an administrator confirms a genuine match.</p>
+    <a href="{% url 'home' %}" class="btn btn-primary">Back to Home</a>
+</div>
+{% endblock %}

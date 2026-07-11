@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %}Match Review — Admin{% endblock %}
+{% block content %}
+<h3 class="mb-3">Pending Match Review</h3>
+<table class="table">
+    <thead>
+        <tr><th>Missing Person</th><th>Sighting Report</th><th>Confidence</th><th>Action</th></tr>
+    </thead>
+    <tbody>
+    {% for match in matches %}
+        <tr>
+            <td>{{ match.person.name }} (Age {{ match.person.age }})</td>
+            <td>Sighting #{{ match.report.id }} — {{ match.report.location }}</td>
+            <td>{{ match.confidence_score }}%</td>
+            <td>
+                <a href="{% url 'approve_match' match.id %}" class="btn btn-success btn-sm">Approve</a>
+                <a href="{% url 'reject_match' match.id %}" class="btn btn-danger btn-sm">Reject</a>
+            </td>
+        </tr>
+    {% empty %}
+        <tr><td colspan="4">No pending matches.</td></tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

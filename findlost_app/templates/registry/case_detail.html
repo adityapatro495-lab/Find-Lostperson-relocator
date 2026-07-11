@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3>{{ person.name }}</h3>
+<img src="{{ person.photo.url }}" style="max-width:250px;" class="mb-3 rounded">
+<p><strong>Age:</strong> {{ person.age }} | <strong>Gender:</strong> {{ person.gender }}</p>
+<p><strong>Last seen:</strong> {{ person.last_seen_location }}</p>
+<p><strong>Status:</strong> <span class="badge bg-info">{{ person.get_status_display }}</span></p>
+<p><strong>Registered:</strong> {{ person.created_at }}</p>
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="alert alert-success">
+    <h4>Case Registered Successfully</h4>
+    <p>Case for <strong>{{ person.name }}</strong> has been created and is now active
+    in the FINDLOST matching system (Case ID: {{ person.id }}).</p>
+    <a href="{% url 'case_dashboard' %}" class="btn btn-primary">View My Cases</a>
+</div>
+{% endblock %}
