@@ -13,7 +13,14 @@ SECRET_KEY = 'django-insecure-change-this-key-before-deployment'
 # SECURITY WARNING: don't run with DEBUG = True in production (see Appendix B.5)
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+ALLOWED_HOSTS = [
+    '*'
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://localhost:8000',
+    'https://*.app.github.dev',
+]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
