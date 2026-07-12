@@ -14,7 +14,9 @@ SECRET_KEY = 'django-insecure-change-this-key-before-deployment'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '*'
+    "127.0.0.1",
+    "localhost",
+    ".app.github.dev",
 ]
 
 CSRF_TRUSTED_ORIGINS = [
