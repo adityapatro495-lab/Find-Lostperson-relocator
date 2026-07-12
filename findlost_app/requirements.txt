@@ -1,6 +1,17 @@
 Django==4.2.7
-dlib==19.24.2
-face-recognition==1.3.0
-face-recognition-models==0.3.0
 numpy==1.26.4
 Pillow==10.2.0
+
+# Face recognition features (optional, requires C++ compiler and CMake)
+# Install these manually if you have build tools:
+# dlib==19.24.2
+# face-recognition==1.3.0
+# face-recognition-models==0.3.0
+
+# Note: The application will work without face recognition installed.
+# Face detection/matching features will be disabled with a helpful message.
+# To enable face recognition:
+#   Windows: Install Visual Studio Build Tools with C++ support
+#   Linux (Ubuntu/Debian): sudo apt install build-essential cmake python3-dev
+#   macOS: xcode-select --install && brew install cmake
+# Then uncomment the lines above and run: pip install -r requirements.txt

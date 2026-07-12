@@ -1,0 +1,16 @@
+# FINDLOST Development Requirements (without dlib/face-recognition)
+# Use this when C++ compiler is not available
+# dlib requires a C++ compiler and CMake to build from source
+
+Django==4.2.7
+numpy==1.26.4
+Pillow==10.2.0
+sqlparse==0.5.5
+asgiref==3.11.1
+tzdata==2026.3
+
+# Note: To enable face recognition features, install:
+# - C++ compiler (MSVC on Windows, gcc on Linux)
+# - CMake
+# - Python development headers
+# Then run: pip install dlib==19.24.2 face-recognition==1.3.0
